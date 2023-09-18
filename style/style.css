@@ -502,6 +502,9 @@ main .btn:hover {
     border: 2px solid rgb(178, 178, 178);
     border-radius: 20px;
 }
+.skills__main{
+    height: 800px;
+}
 
 .left-sec-skills {
     display: flex;
@@ -841,7 +844,11 @@ main .btn:hover {
     }
 
     .main {
-        width: 1280px;
+        /* width: 1280px; */
         margin: auto;
+    }
+    .skills__main{
+        width: auto;
+        height: px;
     }
 }
