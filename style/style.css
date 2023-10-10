@@ -214,8 +214,9 @@ section main section div img {
 }
 
 .header{
-    margin-top: 100px;
+    margin-top: 108px;
 }
+
 .home {
     display: flex;
     justify-content: space-around;
@@ -357,7 +358,7 @@ main .btn:hover {
     font-size: 3rem;
     padding-bottom: 1rem;
     text-align: center;
-    margin-top: 67px;
+    margin-top: 72px;
     text-decoration: none;
 }
 
@@ -377,6 +378,7 @@ main .btn:hover {
 #success {
     color: #28A745;
 }
+
 
 .about {
     display: flex;
@@ -434,6 +436,7 @@ main .btn:hover {
     text-transform: capitalize;
     transition: all 0.2s linear;
     font-size: 1.5rem;
+    text-decoration: none;
     line-height: 1.5;
     font-family: 'Ubuntu', sans-serif !important;
 }
