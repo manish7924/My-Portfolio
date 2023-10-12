@@ -15,21 +15,21 @@
 <body>
   <nav class="navbar background">
     <div class="logo">
-      <div class="logo">
-        <img style="width: 44px;" src="img/main-profile.png" alt="">
+      <div class="logo_img">
+        <img src="img/main-profile.png" alt="">
       </div>
     </div>
     <div class="left_nav">
-      <span><a class="name-logo about-name" href="#home">Manish's</a></span> <span class="name-d">Portfolio</span>
+      <span><a class="name-logo" href="#home">Manish's</a></span> <span class="name_p">Portfolio</span>
     </div>
-    <div class="nav-list">
+    <div class="nav-list nav">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" class="nav-item is-active" active-color="orange">Home</a></li>
+        <li><a href="#about" class="nav-item" active-color="green">About</a></li>
+        <li><a href="#skills" class="nav-item" active-color="blue">Skills</a></li>
+        <li><a href="#projects" class="nav-item" active-color="red">Projects</a></li>
+        <li><a href="#services"  class="nav-item" active-color="yellow">Services</a></li>
+        <li><a href="#contact" class="nav-item" active-color="rebeccapurple">Contact</a></li>
       </ul>
     </div>
     <div class="right-nav">
@@ -38,17 +38,17 @@
       </div>
     </div>
   </nav>
-  <div id="home" style="color: white; background-color: white;"></div>
+  <div id="home" class="top_space"></div>
   <header class="header">
   </header>
   <main class="main">
     <!-- Home Section -->
     <section class="home">
       <div class="leftSection">
-        <span class="home-text">Hi, I'm </span><span class="name">Manish</span>
+        <span class="home-hello">Hi, I'm </span><span class="name">Manish</span>
         <div style="margin-bottom: 7px;" class="home-text">And I am a passionate</div>
         <!-- <div>Web Developer</div> -->
-        <span id="element"></span><br>
+        <span id="element" class="intro"></span><br>
 
         <div class="buttons">
           <a href="#about"><button style="margin-left: 7px;" class="btn">About me</button>
@@ -70,16 +70,15 @@
             </a>
           </div>
         </div>
-
       </div>
       <div class="rightSection">
-        <img class="home___img" style="width: 620px;scale: 1.5; padding: 0 80px 0 0;" src="img/out.png" alt="">
+        <img class="main__img" src="img/out.png" alt="">
       </div>
     </section>
   </main>
-  <div class="sec-head"></div>
   <hr>
-  <div id="about"></div>
+
+  <div id="about" class="top_space"></div>
   <main class="main">
     <!-- About Me Section-->
     <div class="sec-head"></div>
@@ -100,28 +99,27 @@
             and XML, I design intuitive Android applications with attention to detail and UI/UX designs, telling stories
             through every pixel. With Git expertise, I ensure smooth collaboration and project management.
           </sapn><br><br>
-          <h4 class="about-text-bold"><strong>
-              | Frontend Web Developer | Android Developer | UI/UX Designer
-            </strong></h4><br>
-
-          <h5></h5>
+          <h4 class="about-text-bold">
+            | Frontend Web Developer | Android Developer | UI/UX Designer |
+          </h4><br>
         </div>
       </div>
     </section>
   </main><br>
-  <hr id="skills">
+  <hr>
 
+  <div id="skills" class="top_space"></div>
   <main class="skills__main">
     <!-- SKILLS -->
     <div class="sec-head"></div>
     <section class="skills section">
       <h2 class="heading"><span>My</span>Skills</h2>
-      </h2><br>
+      </h2><br><br>
 
       <div class="skills-container">
         <div class="left-sec-skills">
           <div class="left-skills">
-            <h2 class="skills-subtitle"><strong>Front-end Skills</strong></h2><br>
+            <h2 class="skills-subtitle">Front-end Skills</h2><br>
             <div class="skills-data">
               <div class="skills-names">
                 <img class="skills-icon skill-img" src="./img/html5.png" alt="">
@@ -139,19 +137,15 @@
               </div>
 
               <div class="skills-names">
-                <img class="skills-icon" src="./img/react-js.png" alt="">
+                <img style="width: 36px; height: 34px;" class="skill-img" src="./img/react-js.png" alt="">
                 <span class="skills-name">React</span>
               </div>
-              <!-- <div class="skills-names">
-                <img class="skills-icon skill-img" src="./img/bootstrap.png" alt="" />
-                <span class="skills-name">Bootstrap</span>
-              </div> -->
             </div>
           </div>
 
 
           <div class="left-skills">
-            <h2 class="skills-subtitle"><strong>Backend Skills</strong></h2>
+            <h2 class="skills-subtitle">Backend Skills</h2>
             <div class="skills-data">
               <div class="skills-names">
                 <img class="skills-icon" src="./img/django.png" alt="" />
@@ -183,7 +177,7 @@
 
         <div class="right-sec-skills">
           <div class="right-skills">
-            <h2 class="skills-subtitle"><strong>Android Developement</strong></h2>
+            <h2 class="skills-subtitle">Android Developement</h2>
             <div class="skills-data">
               <div class="skills-names">
                 <img class="skills-icon skill-img" src="./img/java.png" alt="">
@@ -203,7 +197,7 @@
           </div>
 
           <div class="right-skills">
-            <h2 class="skills-subtitle"><strong>Tools</strong></h2>
+            <h2 class="skills-subtitle">Tools</h2>
             <div class="skills-data">
               <div class="skills-names">
                 <img class="skills-icon skill-img" src="./img/github.svg" alt="" />
@@ -227,8 +221,9 @@
     </section>
     </section>
   </main><br><br>
-  <hr id="projects">
+  <hr>
 
+  <div id="projects" class="top_space"></div>
   <main class="main"">
     <div class="sec-head"></div>
     <section class="projects">
@@ -252,7 +247,7 @@
         <div class="work__card">
           <img src="img/yt.png" alt="" class="work__img">
           <h3 class="work__title">Youtube</h3>
-          <span>(Android Webview app)</span>
+          <span>(Android app)</span>
           <a href="https://drive.google.com/file/d/1XaK0z4x3euIUrk16NKGbG_xZRBHl1m3J/view?usp=drivesdk"
             class="work__button" target="_blank" download="New_Gen_Youtube.apk">View</a>
         </div>
@@ -280,8 +275,9 @@
       </div>
     </section>
   </main><br><br><br>
-  <hr id="services">
+  <hr>
 
+  <div id="services" class="top_space"></div>
   <main class="main">
     <div class="sec-head"></div>
     <section class="services">
@@ -290,8 +286,9 @@
       <span class="service-subtitle"><strong>Coming soon</strong></span>
     </section>
   </main><br>
-  <hr id="contact">
+  <hr>
 
+  <div id="contact" class="top_space"></div>
   <main class="main">
     <div class="sec-head"></div>
     <section class="contact-container">
@@ -357,14 +354,14 @@
       </div>
     </section>
 
-    <script src="js/resp.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
 <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 <script>
   var typed = new Typed('#element', {
-    strings: ['Web Developer', 'UI/UX Designer', 'Graphic Designer', 'Android Developer'],
+    strings: ['Android Developer', 'UI/UX Designer', 'Graphic Designer','Web Developer' ],
     typeSpeed: 50,
   });
 </script>
