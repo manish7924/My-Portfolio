@@ -5,8 +5,10 @@
 * {
     margin: 0;
     padding: 0;
+    width: auto;
     box-sizing: border-box;
     font-family: 'Ubuntu';
+    scroll-behavior: smooth;
     transition: all 0.2s linear;
 }
 
@@ -21,8 +23,10 @@
     --main_color: #a955ed;
     --black_color: #111111;
     --shadow_color: #cfcfcf;
+    --shadow: #cecece;
     --blue_color: #1877F2;
-    --shadow_border: rgb(178, 178, 178);
+    --light_blue_color: #3686ef;
+    --shadow_border: rgb(197, 197, 197);
     --text_color: black;
 }
 
@@ -33,15 +37,18 @@
 
 html,
 body {
-    width: 1535px;
+    width: auto;
     scroll-behavior: smooth;
-    background-color: white;
+    background-color: transparent;
     margin: var(--header-height) 0 0 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     color: var(--second-color);
     outline: none;
+    justify-content: center;
+    align-items: center;
     border: none;
+    padding: 7px 7px;
     text-decoration: none;
     /* margin-top: 1519px; */
 }
@@ -61,24 +68,17 @@ header {
     margin-top: 50px;
 }
 
-.main {
-    height: 595px;
-}
-
 .navbar {
     display: flex;
     align-items: center;
     width: auto;
-    height: 63px;
+    height: 66px;
     position: sticky;
     background-size: cover;
     border-radius: 50px;
     background-blend-mode: darken;
-    left: 0;
     top: 7px;
-    right: 0;
     z-index: 1;
-    transition: background-color .5s cubic-bezier(.28, .11, .32, 1);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
     background: hsla(0, 0%, 80%, 0.25);
@@ -86,7 +86,8 @@ header {
     /* border-bottom: 2px solid hsla(0, 0%, 90%, 0.18); */
     border-top: 1.2px solid hsla(0, 0%, 55%, 0.25);
     border-bottom: 1.2px solid hsla(0, 0%, 66%, 0.25);
-
+    transition: background-color .5s cubic-bezier(.28, .11, .32, 1);
+    transition-property: background-color, backdrop-filter, -webkit-backdrop-filter;
 }
 
 .navbar:hover {
@@ -96,35 +97,72 @@ header {
     border-bottom: 1.4px solid hsla(0, 0%, 55%, 0.25);
 }
 
-.background {
-    left: 0;
-    top: 0;
-    z-index: 1;
-    transition: background-color .5s cubic-bezier(.28, .11, .32, 1);
-    transition-property: background-color, backdrop-filter, -webkit-backdrop-filter;
+.nav {
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    /* padding: 0 7px; */
+    transition: all ease .2s;
+    /* border-radius: 40px; */
+    /* box-shadow: 0 10px 40px rgba(159, 162, 177, 0.8); */
 }
 
-.main {
-    height: 590px;
-    left: 0;
-    right: 0;
+.nav-list {
+    margin-left: 30px;
+    margin-right: 30px;
+    /* padding: 200px; */
 }
 
-body::-webkit-scrollbar {
-    background-color: transparent;
-    width: 12px;
+nav .logo {
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin: 10px 5px 10px 5px;
 }
 
-body::-webkit-scrollbar-thumb {
-    border-radius: 50px;
-    background: hsla(193, 100%, 50%, 0.25);
-    width: 10px;
-    height: 4px;
+nav .logo_img {
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin: 10px 5px 10px 5px;
 }
-
 
 nav img {
-    width: 60px;
+    width: 44px;
+    border-radius: 100px;
+    border: .9px solid black;
+}
+
+.nav-item {
+    /* color: #83818c; */
+    text-decoration: none;
+    transition: all ease 0.3s;
+    z-index: 1;
+    color: black;
+    font-weight: 400;
+    position: relative;
+}
+
+.name-logo {
+    color: #920cff;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+    font-size: 1.5rem;
+    text-decoration: none;
+    line-height: 1.5;
+    font-family: 'Ubuntu', serif;
+    /* font-family: serif; */
+}
+
+.name_p {
+    margin-left: 7px;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+    font-size: 1.5rem;
+    color: ;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 nav ul {
@@ -142,14 +180,14 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: black;
-    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    font-size: 1.02rem;
     cursor: pointer;
 }
 
 nav ul li a:hover {
-    color: blueviolet;
-    font-size: 1.05rem;
+    color: var(--main_color);
+    font-size: 1.04rem;
     text-decoration: underline;
 
 }
@@ -162,26 +200,6 @@ nav .left_nav {
     width: 40%;
 }
 
-nav .logo {
-    justify-content: center;
-    align-items: center;
-    border-radius: 100px;
-    margin: 10px 5px 10px 5px;
-}
-
-nav .logo>img {
-    /* margin: 5px; */
-    width: 48px;
-    /* padding: 2px 2px 2px 2px ; */
-    border: 2px black;
-    border-radius: 23px;
-}
-
-nav .nav-list {
-    margin-left: 30px;
-    margin-right: 30px;
-    /* padding: 200px; */
-}
 
 nav .right-nav {
     display: flex;
@@ -213,26 +231,77 @@ section main section div img {
     width: 60px;
 }
 
-.header{
-    margin-top: 108px;
+.header {
+    margin-top: 90px;
+}
+
+.main {
+    height: 595px;
+    width: auto;
+    margin: auto;
+}
+
+body::-webkit-scrollbar {
+    background-color: transparent;
+    width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: hsla(193, 100%, 50%, 0.25);
+    width: 10px;
+    height: 4px;
 }
 
 .home {
     display: flex;
+    width: auto;
     justify-content: space-around;
     align-items: center;
-    margin: 80px 0;
+    padding: 0 90px 0 0;
     outline: none;
     border: none;
     text-decoration: none;
     transition: all 0.5s linear;
     /* transform: translateY(0px) translateZ(0px) */
 }
-.main{
-    left: 0;
-    right: 0;
-    margin: auto;
+
+.main__img {
+    scale: 1.15;
 }
+
+
+.nav-item:before {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 100%;
+    height: 3.2px;
+    background-color: var(--light_blue_color);
+    border-radius: 8px 8px 0 0;
+    opacity: 0;
+    transform: 0.3s;
+}
+
+.nav-item:not(.is-active):hover:before {
+    opacity: 1;
+    bottom: 0;
+}
+
+
+.nav-indicator {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.4s;
+    height: 5px;
+    z-index: 1;
+    border-radius: 8px 8px 0 0;
+
+}
+
+
 .home>div {
     width: 30%;
 }
@@ -242,12 +311,30 @@ section main section div img {
     margin-top: 40px;
 }
 
+.home-hello {
+    font-size: 40px;
+}
+
 .home-text {
     font-size: 38px;
 }
 
+#element {
+    color: blueviolet;
+    animation: blinker 5s linear infinite;
+    align-items: center;
+    text-align: center;
+    margin-top: 23px;
+}
+
+@keyframes blinker {
+    80% {
+        opacity: .2;
+    }
+}
+
 .name {
-    color: rgb(0, 0, 255);
+    color: rgb(47, 47, 255);
     text-transform: capitalize;
     transition: all 0.2s linear;
     font-size: 40px;
@@ -261,6 +348,13 @@ section main section div img {
     margin-top: 10px;
     justify-content: start;
     text-decoration: none;
+}
+
+.top_space {
+    width: auto;
+    height: 23px;
+    color: transparent;
+    background-color: transparent;
 }
 
 main .btn {
@@ -284,9 +378,11 @@ main .btn {
 main .btn:hover {
     background-color: black;
     border: 1.6px solid yellow;
-    scale: 1.10;
+    scale: 1.07;
     padding: 4px;
-    font-weight: 400;
+    width: 120px;
+    height: 40px;
+    font-weight: 230;
     transition: all ease 0.7s;
     box-shadow: 0 4px 5px 0 rgb(156, 156, 156);
 }
@@ -331,28 +427,13 @@ main .btn:hover {
     }
 } */
 
-.name-d {
-    margin-left: 7px;
-    text-transform: capitalize;
-    transition: all 0.2s linear;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
-#element {
-    color: blueviolet;
-    animation: blinker 5s linear infinite;
-    align-items: center;
-    text-align: center;
-}
 
-@keyframes blinker {
-    90% {
-        opacity: .2;
-    }
+.main {
+    height: 595px;
+    width: auto;
+    /* background-image: linear-gradient(red, blue); */
 }
-
 
 .heading {
     font-size: 3rem;
@@ -367,24 +448,13 @@ main .btn:hover {
     /* text-transform: uppercase; */
 }
 
-.error {
-    color: var(--main_color);
-}
-
-.error-border {
-    border-bottom: 1px solid var(--main_color);
-}
-
-#success {
-    color: #28A745;
-}
-
 
 .about {
     display: flex;
     justify-content: space-evenly;
     text-align: center;
 }
+
 
 #box {
     margin: auto;
@@ -421,32 +491,42 @@ main .btn:hover {
 .about-section {
     width: 40%;
     margin-top: 70px;
-    /* display: flex; */
+    height: 350px;
     justify-content: center;
-    /* border: 2px solid black; */
     border-radius: 20px;
 }
 
 .about-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+    text-decoration: none;
+    font-family: 'Ubuntu', 'cursive';
 }
 
 .about-name {
     color: blue;
     text-transform: capitalize;
     transition: all 0.2s linear;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-decoration: none;
     line-height: 1.5;
-    font-family: 'Ubuntu', sans-serif !important;
+    font-family: 'Ubuntu', 'cursive' !important;
 }
 
 .about-text {
     text-align: center;
     text-decoration: none;
     text-transform: none;
-    font-size: 17px;
+    font-size: 1.23rem;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+
+.bout-text-bold {
+    font-size: 1.25rem;
     font-family: Arial, Helvetica, sans-serif !important;
+    font-weight: 700;
 }
 
 .about-left {
@@ -459,16 +539,14 @@ main .btn:hover {
 }
 
 .skills-icon:hover {
-    width: 50px;
     scale: 1.05;
 }
 
 .skill-img {
-    width: 42px;
+    width: 36px;
 }
 
 .skill-img:hover {
-    width: 42px;
     scale: 1.05;
 }
 
@@ -502,11 +580,13 @@ main .btn:hover {
     height: 400px;
     margin: auto;
     /* background-color: white; */
-    border: 2px solid rgb(178, 178, 178);
+    border: 2px solid var(--shadow_color);
     border-radius: 20px;
 }
-.skills__main{
-    height: 800px;
+
+.skills__main {
+    height: 600px;
+    width: auto;
 }
 
 .left-sec-skills {
@@ -524,34 +604,36 @@ main .btn:hover {
 .left-skills {
     width: 50%;
     border: 2px solid var(--shadow_border);
-    border-radius: 7px;
+    border-radius: 12px;
     margin: 20px 10px 20px 20px;
-    box-shadow: 6px 6px #cfcfcf;
+    box-shadow: 5px 5px var(--shadow);
 }
 
 .left-skills:hover {
-    scale: 1.04;
+    scale: 1.025;
     transition: all ease .7s;
 }
 
 .right-skills {
     width: 50%;
     border: 2px solid var(--shadow_border);
-    border-radius: 7px;
+    border-radius: 12px;
     margin: 20px 10px 20px 20px;
-    box-shadow: 6px 6px #cfcfcf;
+    box-shadow: 5px 5px var(--shadow);
 }
 
 .right-skills:hover {
-    scale: 1.04;
+    scale: 1.025;
     transition: all ease .7s;
 }
 
 .skills-subtitle {
     display: flex;
-    /* max-lines: 1; */
+    margin: 4px;
     padding: 4px;
-    text-align: center !important;
+    font-size: 17px;
+    text-align: center;
+    justify-content: center;
     border-top: 0;
     border-left: 0;
     border-bottom: 2px;
@@ -563,7 +645,8 @@ main .btn:hover {
 
 .skills-data {
     justify-content: center;
-    margin: 5px;
+    padding: 10px;
+    margin: 4px;
     /* border: 2px solid red; */
 }
 
@@ -625,6 +708,8 @@ main .btn:hover {
     padding: 1rem;
     scale: .9;
     width: 192px;
+    justify-content: center;
+    text-align: center;
     /* height: 260px; */
     transition: all ease 1s;
 }
@@ -639,6 +724,7 @@ main .btn:hover {
     width: 120px;
     height: 120px;
     justify-content: center;
+    text-align: center;
 }
 
 .work__img:hover {
@@ -664,13 +750,15 @@ main .btn:hover {
     column-gap: 0.25rem;
     display: flex;
     font-size: 1rem;
-    margin-left: 7px;
+    margin-left: 0px;
+    justify-content: center;
+    text-align: left;
     text-decoration: none;
 }
 
 .work__button:hover {
     scale: 1.02;
-    margin-left: 7px;
+    margin-left: 2px;
     text-decoration: underline;
     color: blue;
 }
@@ -704,7 +792,7 @@ main .btn:hover {
 .contact {
     display: flex;
     margin: auto;
-    background-color: rgb(249, 246, 255);
+    background-color: rgb(255, 236, 237);
     justify-content: center;
 }
 
@@ -805,7 +893,7 @@ main .btn:hover {
     color: #28A745;
 }
 
-@media only screen and (max-width: 1155px) {
+@media only screen and (max-width: 768px) {
     body {
         width: 100%;
         height: 100%;
@@ -828,10 +916,6 @@ main .btn:hover {
         margin: auto;
     }
 
-    .home___img {
-        width: auto;
-    }
-
     .skills-container {
         flex-direction: column;
         margin: auto;
@@ -850,7 +934,8 @@ main .btn:hover {
         /* width: 1280px; */
         margin: auto;
     }
-    .skills__main{
+
+    .skills__main {
         width: auto;
         height: px;
     }
