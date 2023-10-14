@@ -578,6 +578,7 @@ main .btn:hover {
 
 .skills__main {
     height: 600px;
+    margin: auto;
     width: auto;
 }
 
@@ -904,6 +905,18 @@ main .btn:hover {
     .home {
         width: auto;
         margin: auto;
+    }
+
+    .skills__main {
+        margin: auto;
+        width: auto;
+    }
+    
+
+    .heading {
+        margin: auto;
+        text-align: center;
+        justify-content: center;
     }
 
     .skills-container {
