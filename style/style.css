@@ -1,8 +1,8 @@
 /* google fonts */
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 
-* {
+*{
     margin: 0;
     padding: 0;
     width: auto;
@@ -37,7 +37,6 @@
 
 html,
 body {
-    width: auto;
     scroll-behavior: smooth;
     background-color: transparent;
     margin: var(--header-height) 0 0 0;
@@ -101,7 +100,6 @@ header {
     display: inline-flex;
     position: relative;
     overflow: hidden;
-    max-width: 100%;
     /* padding: 0 7px; */
     transition: all ease .2s;
     /* border-radius: 40px; */
@@ -429,12 +427,6 @@ main .btn:hover {
 
 
 
-.main {
-    height: 595px;
-    width: auto;
-    /* background-image: linear-gradient(red, blue); */
-}
-
 .heading {
     font-size: 3rem;
     padding-bottom: 1rem;
@@ -576,7 +568,7 @@ main .btn:hover {
 .skills-container {
     display: flex;
     justify-content: space-evenly;
-    width: 1250px;
+    width: auto;
     height: 400px;
     margin: auto;
     /* background-color: white; */
@@ -683,9 +675,7 @@ main .btn:hover {
 }
 
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 968px;
+    width: 968px;
 }
 
 .work__container {
@@ -764,8 +754,8 @@ main .btn:hover {
 }
 
 .container {
-    margin-left: auto;
-    margin-right: auto;
+  /* margin-left: auto;
+    margin-right: auto; */
     max-width: 968px;
 }
 
@@ -895,7 +885,7 @@ main .btn:hover {
 
 @media only screen and (max-width: 768px) {
     body {
-        width: 100%;
+        width: auto;
         height: 100%;
     }
 
@@ -912,7 +902,7 @@ main .btn:hover {
     } */
 
     .home {
-        width: 1280px;
+        width: auto;
         margin: auto;
     }
 
@@ -931,12 +921,11 @@ main .btn:hover {
     }
 
     .main {
-        /* width: 1280px; */
+        width: auto;
         margin: auto;
     }
 
     .skills__main {
         width: auto;
-        height: px;
     }
 }
