@@ -363,7 +363,7 @@ main .btn {
     justify-content: space-around;
     width: 120px;
     height: 40px;
-    background-color: var(--blue_color);
+    background-color: #a955ed;
     color: white;
     text-decoration: none;
     border: 2px solid transparent;
